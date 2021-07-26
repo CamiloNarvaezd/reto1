@@ -25,8 +25,5 @@ total_deducciones = salud + pension + cajacompensacion
 
 salarioneto = salariobruto - total_deducciones
 
-print(valor_hora_extra)
-print (total_deducciones)
-print (salariobruto:.1)
-print (salarioneto.1 )
-print 
+print(round(salariobruto, 1))
+print(round(salarioneto, 1))
