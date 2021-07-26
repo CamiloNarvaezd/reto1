@@ -5,25 +5,28 @@ bonificacion = int(bonificacion)
 
 ##operaciones
 hora_normal = salario / 176
-valor_hora_extra = hora_normal * 0.25
-
+valor_hora_extra = hora_normal * 1.25
+pago_extras = valor_hora_extra * numerohoras
 ##bonificacion
 
 if bonificacion ==1:
-    bonificacion = salario * 0.065
+    bonificacion = salario * 65/1000
 else:bonificacion = 0    
 
-salariobruto = salario + valor_hora_extra + bonificacion
+salariobruto = salario + pago_extras + bonificacion
 
 #deducciones
 
-salud = salariobruto * 0.25
-pension = salariobruto * 0.25
-cajacompensacion = salariobruto * 0.4
+salud = salariobruto * 25 / 1000
+pension = salariobruto * 25 / 1000
+cajacompensacion = salariobruto * 40 / 1000
+ 
+total_deducciones = salud + pension + cajacompensacion
 
-salarioneto = salariobruto-(salud+pension+cajacompensacion)
+salarioneto = salariobruto - total_deducciones
 
-
-print(salariobruto)
-
-print(salarioneto)
+print(valor_hora_extra)
+print (total_deducciones)
+print (salariobruto:.1)
+print (salarioneto.1 )
+print 
